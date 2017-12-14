@@ -807,7 +807,11 @@ if(ANDROID)
 	set(nativeExtra ${nativeExtra} ${NativeAppSource})
 endif()
 
-set(THIN3D_PLATFORMS ext/native/thin3d/thin3d_gl.cpp)
+set(THIN3D_PLATFORMS
+	ext/native/thin3d/thin3d_gl.cpp
+	ext/native/thin3d/GLRenderManager.cpp
+	ext/native/thin3d/GLQueueRunner.cpp)
+
 if(VULKAN)
   set(THIN3D_PLATFORMS ${THIN3D_PLATFORMS}
     ext/native/thin3d/thin3d_vulkan.cpp
